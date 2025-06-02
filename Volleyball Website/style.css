@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: black;
+  line-height: 1.6;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+header {
+  background-color: #103a5e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  position: relative;
+}
+
+.logo {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+.logo-image {
+  height: 40px;
+  overflow: hidden;
+}
+
+.logo-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+}
+
+.text {
+  text-align: center;
+}
+
+.text p {
+  line-height: 1;
+  margin: 0;
+}
+
+.te-kura-text {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.te-kura-text p {
+  font-family: "Montserrat", "sans-serif";
+}
+
+.volleyball-text {
+  margin-left: 10px;
+}
+
+.volleyball-text p {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.nav-links {
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #fff;
+}
+
+.hero {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 30%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.page-gallery .hero {
+  background-image: url("Components/banners/banner2.png");
+}
+
+.page-join-us .hero {
+  background-image: url("Components/banners/banner3.png");
+  background-position: center bottom;
+}
+
+.page-about-us .hero {
+  background-image: url("Components/banners/banner1.png");
+}
+
+.page-gallery .hero {
+  background-image: url("Components/banners/banner2.png");
+}
+
+.page-join-us .hero {
+  background-image: url("Components/banners/banner3.png");
+  background-position: center bottom;
+}
+
+.page-calendar .hero {
+  background-image: url("Components/banners/banner4.png");
+}
+
+main {
+  background-color: #eaf6fb;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.heading-background {
+  background-color: #226597;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  line-height: 1.8;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.member-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem 0;
+}
+
+.member-profile {
+  flex: 0 0 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  text-align: center;
+}
+
+.member-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Eighth profile needs custom object-position */
+.member-profiles .member-profile:nth-child(8) .member-image img {
+  object-position: center 30%;
+}
+
+.member-info {
+  background-color: rgba(34, 101, 151, 0.85);
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  margin: 10px 0 0;
+}
+
+/* Photos Grid (Group & Gameplay) */
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem 0;
+}
+
+.photo {
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ======================================
+   MEMBERSHIP FORM (Join Us page)
+   ====================================== */
+.form-section {
+  background-color: #226597;
+  padding: 30px 40px;
+  color: #fff;
+  margin: 2rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.membership-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Each form row (label + control) */
+.membership-form .form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.membership-form label {
+  flex: 0 0 180px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* Text & email & tel inputs */
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f5fafd;
+  color: black;
+  font-size: 1rem;
+}
+
+/* Placeholder color for inputs */
+.membership-form input::placeholder {
+  color: #999;
+}
+
+/* Radio/checkbox group label */
+.membership-form .question-label {
+  flex: 0 0 200px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Radio options container */
+.membership-form .options {
+  flex: 1;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.membership-form .options label {
+  font-weight: normal;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.membership-form .options input[type="radio"] {
+  margin-right: 6px;
+  accent-color: #fff;
+}
+
+/* Checkbox rows */
+.membership-form .checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.membership-form .checkbox-row label {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.membership-form .checkbox-row input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #fff;
+}
+
+/* Link inside a checkbox label */
+.membership-form .checkbox-row .link {
+  color: #a8dadc;
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.membership-form .submit-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.membership-form .submit-row button {
+  margin-left: 180px; /* match label width */
+  background-color: #87c0cd;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 15px 60px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.membership-form .submit-row button:hover {
+  background-color: #7bb2b7;
+}
+
+/* ======================================
+   FOOTER
+   ====================================== */
+footer {
+  background-color: #0d4673;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer .contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+.social-icons {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+footer p.copyright {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.iframe-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 600px;
+  border: 0;
+}
